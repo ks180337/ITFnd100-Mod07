@@ -292,24 +292,24 @@ class Processor:
 
 ## Running the Script 
 
-![Updated Binary Files](https://github.com/ks180337/ITFnd100-Mod07/blob/main/docs/Figure2.png "Updated Binary Files")
+![Updated Binary Files](Figure2.png "Updated Binary Files")
 Figure 2. Updated Binary Files
 
 
-![no “ToDoList.dat” file present](https://github.com/ks180337/ITFnd100-Mod07/blob/main/docs/Figure3.png "no “ToDoList.dat” file present")
+![no “ToDoList.dat” file present](Figure3.png "no “ToDoList.dat” file present")
 Figure 3. In PyCharm – error messages for no “ToDoList.dat” file present
 
 
-![empty task or priority](https://github.com/ks180337/ITFnd100-Mod07/blob/main/docs/Figure4.png "no “empty task or priority")
+![empty task or priority](Figure4.png "no “empty task or priority")
 Figure 4. In PyCharm – error messages for empty task or priority
 
 
-![CMD_no “ToDoList.dat” file present](https://github.com/ks180337/ITFnd100-Mod07/blob/main/docs/Figure5.png "CMD_no “ToDoList.dat” file present")
+![CMD_no “ToDoList.dat” file present](Figure5.png "CMD_no “ToDoList.dat” file present")
 
 Figure 5. In command shell – error messages for no “ToDoList.dat” file present
 
 
-![CMD_empty task or priority](https://github.com/ks180337/ITFnd100-Mod07/blob/main/docs/Figure6.png "CMD_empty task or priority")
+![CMD_empty task or priority](Figure6.png "CMD_empty task or priority")
 
 Figure 6. In command shell – error messages for empty task or priority
 
