@@ -57,8 +57,8 @@ https://docs.python.org/3/library/pickle.html
 
 In addition to an overview with short examples, it provided a link to the GitHub page with a source code to review, which helped with a more holistic understanding of the concept and application.
 
-
-## Creating the Script - Header and Initial Comments  
+ 
+## Header and Initial Comments  
 
 ```
 # ---------------------------------------------------------------------------- #
@@ -108,4 +108,190 @@ priority_str = ""   # Captures the priority input from functions to be processed
 
 ## Overall Script Structure 
 
+![Overall Script Structure](https://github.com/ks180337/ITFnd100-Mod07/blob/main/docs/Figure1.png "Overall Script Structure")Figure 1. Overall Script Structure
+
+•	The overall structure of Assignment06.py was retained.  This report will only review the specific sections updated to show:
+- Pickling module (read_data_from_file, write_data_to_file)
+- Exception handling (read_data_from_file, code block to obtain a new task)
+
+•	Details for individual functions were reviewed in Assignment 06.
+
+•	Since the assignment was to update a pre-existing script, it was necessary to understand the overall structure and intent of the original starter script.  Figure 3. shows a high-level flow of the starter script.
+
+•	The “Processing” section contains a class named Processor.  This class consists of several functions that processes data such as reading from or writing to a file or a list.  
+
+•	The “Presentation” section contains a class named IO.  This class consists of several functions that handles inputs and outputs of data such as presenting a menu and obtaining a menu choice from the user.  
+
+•	The details of each class and the functions belonging to the class are explained in later sections.
+
+•	The main body of the script will call upon the class and the functions to carry out the intent of the script. 
+
+
+## Pickling module – function read_data_from_file 
+
+```
+# Processing  --------------------------------------------------------------- #
+
+import pickle   # This imports code from another code file
+
+class Processor:
+    """  Performs Processing tasks """
+
+    @staticmethod
+    def read_data_from_file(file_name, list_of_rows):
+        """ Reads data from a file into a list of dictionary rows
+
+        :param file_name: (string) with name of file:
+        :param list_of_rows: (list) you want filled with file data:
+        :return: (list) of dictionary rows
+        """
+        list_of_rows.clear()  # clear current data
+        try:
+            file = open(file_name, "rb+")   # open file with rb+ mode; r for read,
+            # b for binary, + to generate an error if file does not exist.
+            list_of_rows = pickle.load(file)    # read/unpickle the data with pickle.load method
+            file.close()
+        except FileNotFoundError as e:  # Using more specific exception classes
+            print("ToDoList.dat file is not found.")
+            print("Select Option 4 to exit the program.")
+            print("Built-In Python error info: ")
+            print(e, e.__doc__, type(e), sep='\n')
+        return list_of_rows
+```
+
+•	Import pickle is added to import code needed for pickling module.
+
+•	The read_data_from_file function was defined with two parameters, file_name and list_of_rows. It will read data from a file into a list of dictionary rows.
+
+•	It is a common practice to include a helpful header at the beginning of a function, which is known as docstring.  PyCharm can display tooltips to show you a developer's notes (ctrl + q).  This is common throughout the functions defined in the rest of the script.
+
+•	The open() function was used to open the file that contains initial data, “ToDoList.txt”.  
+
+•	“rb+” mode allows to read from a binary file.  If the file does not exist, Python will generate an error.
+
+•	The file is then assigned to the variable file.
+
+•	pickle.load method was used to read (or unpickle) the data from the binary file, then saved into a list object named list_of_rows.
+
+•	The Try-Except portion of the function will be review in a later section.
+
+•	The close() function was used to close the file.
+
+•	The read_data_from_file function then returns a list object named list_of_rows as its return value.
+
+
+## Pickling module – function write_data_from_file 
+
+```
+@staticmethod
+    def write_data_to_file(file_name, list_of_rows):
+        """ Writes data from a list of dictionary rows to a File
+
+        :param file_name: (string) with name of file:
+        :param list_of_rows: (list) you want filled with file data:
+        :return: (list) of dictionary rows
+        """
+        file = open(file_name, "wb")    # open file with wb mode; w for write, b for binary.
+        pickle.dump(list_of_rows,file)  # write/pickle the data with pickle.dump method
+        file.close()
+        return list_of_rows
+```
+
+•	The write_data_to_file function was defined with two parameters, file_name and list_of_rows.  It will write data from a list of dictionary rows to a file. 
+
+•	The open() function was used to open a file.  
+
+•	The “wb” mode allows to write to a binary file.  If the file already exists, its content is overwritten. If the file does not exist, it is newly created.
+
+•	The file is then assigned to the variable file. 
+
+•	pickle.dump method was used to write (or pickle) the data stored in a list variable list_of_rows into the binary file. 
+
+•	The close() method was used to close the file.
+
+•	The write_data_to_file function then returns a list object named list_of_rows as its return value. 
+
+
+## Exception handling – function read_data_from_file 
+
+```
+# Processing  --------------------------------------------------------------- #
+
+import pickle   # This imports code from another code file
+
+class Processor:
+    """  Performs Processing tasks """
+
+    @staticmethod
+    def read_data_from_file(file_name, list_of_rows):
+        """ Reads data from a file into a list of dictionary rows
+
+        :param file_name: (string) with name of file:
+        :param list_of_rows: (list) you want filled with file data:
+        :return: (list) of dictionary rows
+        """
+        list_of_rows.clear()  # clear current data
+        try:
+            file = open(file_name, "rb+")   # open file with rb+ mode; r for read,
+            # b for binary, + to generate an error if file does not exist.
+            list_of_rows = pickle.load(file)    # read/unpickle the data with pickle.load method
+            file.close()
+        except FileNotFoundError as e:  # Using more specific exception classes
+            print("ToDoList.dat file is not found.")
+            print("Select Option 4 to exit the program.")
+            print("Built-In Python error info: ")
+            print(e, e.__doc__, type(e), sep='\n')
+        return list_of_rows
+```
+
+•	Try-Except structure was used to control the flow of the program execution, and to provide the user more information when an error occurs.
+
+•	“rb+” mode allows to read from a binary file.  If the file does not exist, Python will generate an error.
+
+•	Line 47 shows more specific exception classes, where it will give custom error messages if there is no “ToDoList.dat” file in the directory.
+
+•	It prints a specific file name that is missing, then instruct the user to the next steps.
+
+•	It then prints the built-in Python error messages. 
+
+ 
+## Exception handling – Adding a New Task
+
+```
+    # Step 4 - Process user's menu choice
+    if choice_str.strip() == '1':  # Add a new Task
+        # A structured error handling code added to flag users of empty inputs and returns to the input step
+        while (True):
+            try:
+                task_str, priority_str = IO.input_new_task_and_priority()
+                if not task_str or not priority_str:
+                    raise ValueError
+            except ValueError as e:
+                print("Task/priority cannot be empty")
+                print("Built-In Python error info: ")
+                print(e, e.__doc__, type(e), sep='\n')
+            else:
+                break
+        table_lst = Processor.add_data_to_list(task=task_str, priority=priority_str, list_of_rows=table_lst)
+        continue  # to show the menu
+```
+
+•	choice_str, the variable that contains user option choice is evaluated using the if…elif sequence.  If choice_str equals 1, then Option 1 is chosen to add a new task
+- Functions IO.input_new_task_and_priority and Processor.add_data_to_list were called to accomplish this task.
+- The elif statement is bookended with continue to force the loop to jump back to the beginning and display the menu and asks the user to make the next choice.
+
+•	Try-Except structure was used to control the flow of the program execution, and to provide the user more information when an error occurs.
+
+•	If no values were entered for Task or Priority, it will generate ValueError.
+
+•	Line 176 shows more specific exception classes, where it will give custom error messages if no values were entered for Task or Priority.
+
+•	It prints the built-in Python error messages, then break out of the while loop to ask for input again.
+
+
+## Running the Script 
+
+![Updated Binary Files](https://github.com/ks180337/ITFnd100-Mod07/blob/main/docs/Figure2.png "Updated Binary Files")Figure 2. Updated Binary Files
+
+![no “ToDoList.dat” file present](https://github.com/ks180337/ITFnd100-Mod07/blob/main/docs/Figure2.png "no “ToDoList.dat” file present")Figure 3. In PyCharm – error messages for no “ToDoList.dat” file present
 
