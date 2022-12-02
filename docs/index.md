@@ -305,10 +305,12 @@ Figure 4. In PyCharm – error messages for empty task or priority
 
 
 ![CMD_no “ToDoList.dat” file present](https://github.com/ks180337/ITFnd100-Mod07/blob/main/docs/Figure5.png "CMD_no “ToDoList.dat” file present")
+
 Figure 5. In command shell – error messages for no “ToDoList.dat” file present
 
 
 ![CMD_empty task or priority](https://github.com/ks180337/ITFnd100-Mod07/blob/main/docs/Figure6.png "CMD_empty task or priority")
+
 Figure 6. In command shell – error messages for empty task or priority
 
 
