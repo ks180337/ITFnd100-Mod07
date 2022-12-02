@@ -108,7 +108,7 @@ priority_str = ""   # Captures the priority input from functions to be processed
 
 ## Overall Script Structure 
 
-![Overall Script Structure](https://github.com/ks180337/ITFnd100-Mod07/blob/main/docs/Figure1.png "Overall Script Structure")
+![Overall Script Structure](Figure1.png "Overall Script Structure")
 Figure 1. Overall Script Structure
 
 •	The overall structure of Assignment06.py was retained.  This report will only review the specific sections updated to show:
