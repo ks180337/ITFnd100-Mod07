@@ -15,28 +15,29 @@ The "To-do List" file contains two columns of data, "Task" and "Priority."  The 
 
 New tools and concepts introduced in Module 7, such as, pickling modules and a structured error handling feature, as well as previously addressed concepts such as list, dictionary, functions and classes will be used in accomplishing this task. 
 
+
 ## Instructions 
 Module 7 covered a detailed application of the function and class concepts, delivered through course videos, a book chapter, and web pages.  The course material delivered detailed explanation and examples of the following topics: 
 
-  •	Working with text files – Read, Append modes 
+•	Working with text files – Read, Append modes 
 
-  •	Options for reading data  
+•	Options for reading data  
 
-  •	Combining reading and writing	 
-  
-  •	Working with binary files, using pickling modules
-  
-  •	Structured error handling (Try-Except)	
-  
-  •	Using the exception class	
-  
-  •	Catching specific exceptions	
-  
-  •	Raising custom errors	
-  
-  •	Creating custom exception classes	
-  
-  •	Creating GitHub pages and a markdown file, formatting the page 
+•	Combining reading and writing	 
+
+•	Working with binary files, using pickling modules
+
+•	Structured error handling (Try-Except)	
+
+•	Using the exception class	
+
+•	Catching specific exceptions	
+
+•	Raising custom errors	
+
+•	Creating custom exception classes	
+
+•	Creating GitHub pages and a markdown file, formatting the page 
   
  
 ## Research Exception Handling in Python
@@ -48,6 +49,7 @@ https://pythonbasics.org/try-except/
 
 These websites had thorough explanations on the concept of error handling, the reason why it is needed, and practical examples of errors and potential handling suggestions for them.
 
+
 ## Research Pickling in Python
 Helpful website		
 
@@ -55,7 +57,9 @@ https://docs.python.org/3/library/pickle.html
 
 In addition to an overview with short examples, it provided a link to the GitHub page with a source code to review, which helped with a more holistic understanding of the concept and application.
 
+
 ## Creating the Script - Header and Initial Comments  
+
 ```
 # ---------------------------------------------------------------------------- #
 # Title: Assignment 07
@@ -72,11 +76,36 @@ In addition to an overview with short examples, it provided a link to the GitHub
 # JShin,11.30.2022,Modified code to complete assignment 07, Renamed the file as Assignment07.py
 # ---------------------------------------------------------------------------- #
 ```
+
 •	PyCharm was used to create and run the script.  The assignment was saved as a .py file named “Assignment07.py” at the location according to a direction given in the instruction.  
 
 •	Script header and comments – A script header was created per the examples given in the instruction to communicate the function and document changes of the script.
 
 •	The Change Log was updated to reflect the codes added to the original starter script to complete the assignment.
 
+
+## Declaration of Variables
+```
+# Data ---------------------------------------------------------------------- #
+# Declare variables and constants
+file_name_str = "ToDoList.dat"  # The name of the data file
+file_obj = None  # An object that represents a file
+row_dic = {}  # A row of data separated into elements of a dictionary {Task,Priority}
+table_lst = []  # A list that acts as a 'table' of rows
+choice_str = ""  # Captures the user option selection
+task_str = ""  # Captures the task input from functions to be processed in main body
+priority_str = ""   # Captures the priority input from functions to be processed in main body
+```
+
+•	Using the “Separation of Concerns” concept, variables and constants are declared within the “Data” section along with comments explaining the purposes of each variable.  
+
+•	Variables are organized in order of appearance.
+
+•	Variable from the original script were retained, and several new variables were added.
+
+•	The value of file_name_str was updated to “ToDoList.dat” to be used with pickling module.
+
+
+## Overall Script Structure 
 
 
