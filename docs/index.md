@@ -293,5 +293,25 @@ class Processor:
 
 ![Updated Binary Files](https://github.com/ks180337/ITFnd100-Mod07/blob/main/docs/Figure2.png "Updated Binary Files")Figure 2. Updated Binary Files
 
-![no “ToDoList.dat” file present](https://github.com/ks180337/ITFnd100-Mod07/blob/main/docs/Figure2.png "no “ToDoList.dat” file present")Figure 3. In PyCharm – error messages for no “ToDoList.dat” file present
 
+![no “ToDoList.dat” file present](https://github.com/ks180337/ITFnd100-Mod07/blob/main/docs/Figure3.png "no “ToDoList.dat” file present")Figure 3. In PyCharm – error messages for no “ToDoList.dat” file present
+
+
+![empty task or priority](https://github.com/ks180337/ITFnd100-Mod07/blob/main/docs/Figure4.png "no “empty task or priority")Figure 4. In PyCharm – error messages for empty task or priority
+
+
+![CMD_no “ToDoList.dat” file present](https://github.com/ks180337/ITFnd100-Mod07/blob/main/docs/Figure5.png "CMD_no “ToDoList.dat” file present")Figure 5. In command shell – error messages for no “ToDoList.dat” file present
+
+
+![CMD_empty task or priority](https://github.com/ks180337/ITFnd100-Mod07/blob/main/docs/Figure6.png "CMD_empty task or priority")Figure 6. In command shell – error messages for empty task or priority
+
+
+## Summary
+
+The script described above demonstrates several topics and guidelines covered in Module 7.  Assignment 07 requirements outlined in Steps 3-6 were successfully carried out and documented in this report.  A Python script file is created, using the script for Assignment 06 as base, to add codes that provide user feedback on expected errors using structured error handling, and read and save a binary file using a technique called pickling
+
+New tools and concepts introduced in Module 7, such as, pickling modules and a structured error handling feature, as well as previously addressed concepts such as list, dictionary, functions and classes will be used in accomplishing this task. Throughout the script, comments were used to describe the functions and intents of the applicable set of codes.
+
+The PyCharm debugging tool was used to troubleshoot and to test out various functions of the tool such as breakpoints and “walk” through the code.  
+
+The assignment artifacts were then uploaded to GitHub and Canvas to be submitted for evaluation. 
